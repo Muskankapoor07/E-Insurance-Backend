@@ -37,4 +37,11 @@ public class CustomerMapper {
                 .createdAt(customer.getCreatedAt())
                 .build();
     }
+
+    public void updateEntity(Customer customer, CustomerRequest request) {
+        customer.setFullName(request.getFullName());
+        customer.setEmail(request.getEmail());
+        customer.setPhone(request.getPhone());
+        customer.setDateOfBirth(request.getDateOfBirth());
+    }
 }

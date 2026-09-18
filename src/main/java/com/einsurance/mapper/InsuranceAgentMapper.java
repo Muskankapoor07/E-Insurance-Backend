@@ -28,4 +28,9 @@ public class InsuranceAgentMapper {
                 .createdAt(agent.getCreatedAt())
                 .build();
     }
+
+    public void updateEntity(InsuranceAgent agent, InsuranceAgentRequest request) {
+        agent.setFullName(request.getFullName());
+        agent.setEmail(request.getEmail());
+    }
 }

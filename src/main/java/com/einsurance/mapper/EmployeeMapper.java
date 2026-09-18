@@ -30,4 +30,9 @@ public class EmployeeMapper {
                 .createdAt(employee.getCreatedAt())
                 .build();
     }
+
+    public void updateEntity(Employee employee, EmployeeRequest request) {
+        employee.setFullName(request.getFullName());
+        employee.setEmail(request.getEmail());
+    }
 }
